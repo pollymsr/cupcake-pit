@@ -1,0 +1,69 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 320 100% 97%;
+  --foreground: 320 10% 20%;
+  
+  --card: 320 100% 97%;
+  --card-foreground: 320 10% 20%;
+  
+  --popover: 320 100% 97%;
+  --popover-foreground: 320 10% 20%;
+  
+  --primary: 320 80% 65%;
+  --primary-foreground: 320 10% 98%;
+  
+  --secondary: 35 100% 75%;
+  --secondary-foreground: 35 10% 20%;
+  
+  --muted: 320 20% 90%;
+  --muted-foreground: 320 10% 40%;
+  
+  --accent: 260 80% 70%;
+  --accent-foreground: 260 10% 98%;
+  
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --border: 320 30% 85%;
+  --input: 320 30% 85%;
+  --ring: 320 80% 65%;
+  
+  --radius: 1rem;
+}
+
+body {
+  font-family: 'Baloo 2', system-ui, sans-serif;
+  background: linear-gradient(135deg, #ffd6e9 0%, #c9abff 100%);
+  min-height: 100vh;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .cupcake-card {
+    @apply relative overflow-hidden rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105;
+  }
+  
+  .cupcake-button {
+    @apply rounded-full font-bold transition-all duration-300 transform hover:scale-105 active:scale-95;
+  }
+  
+  .cupcake-gradient {
+    @apply bg-gradient-to-r from-pink-400 to-purple-400 text-white;
+  }
+  
+  .page-container {
+    @apply max-w-md mx-auto p-4 min-h-screen flex flex-col;
+  }
+}
